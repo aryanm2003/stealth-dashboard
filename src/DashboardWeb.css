@@ -1,0 +1,264 @@
+/* DashboardWeb.css */
+
+body {
+    margin: 0;
+  }
+  .full{
+    width:100%;
+    background-color: #101010 ;
+  }
+  .dashboardContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(99, 93, 93, 0.1);
+    background-color: #8f7e65;
+    color: #fff;
+  }
+  
+  .topBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #5c91cf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .companyName {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 40px;
+  }
+  
+  .menuButton {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #9b7e7e;
+    margin: 6px 0;
+  }
+  
+  .sideMenu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    flex-direction: column;
+    background-color: #99b0bd;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .topBar:hover .sideMenu {
+    display: flex;
+  }
+  
+  
+  .sideMenu button {
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: color(srgb rgb(138, 26, 119) green blue);
+  }
+  
+  .sideMenu button:hover {
+    background-color: #eee;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+  
+  .calendarIcon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+  }
+  
+  .profileImage {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 10px;
+    transition: transform 0.3s ease; /* Add transition */
+  }
+  
+  .profileImage:hover {
+    transform: scale(1.4);
+    cursor: pointer;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 16px;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #121111;
+    cursor: pointer;
+    color: #131212;
+  }
+  
+  .selectedTab {
+    background-color: #af4c4c;
+    border-color: #101010;
+    color: #fff;
+  }
+  
+  .insightsContent {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    flex-basis: calc(50% - 10px); /* Adjust card width with margin */
+    padding: 10;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: height 0.3s ease, background-color 0.3s ease; /* Add transition */
+  }
+  
+  .card:hover {
+    height: fit-content;
+    background-color: #555;
+    cursor: pointer;
+  }
+   .card:click{
+    height:fit-content;
+   }
+  @media (max-width: 600px) {
+    .menuButton {
+      display: flex;
+    }
+  
+    .tabs {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .tab {
+      margin-bottom: 10px;
+    }
+  }
+  .menuIcon {
+    cursor: pointer;
+  }
+  
+  .menuIconImage {
+    width: 20px;
+    height: 20px;
+    /* border-radius: 10px; */
+    margin-right: 20px;
+  }
+  
+  .floatingButton {
+    position:fixed;
+    bottom: 70px;
+    right: 40px;
+  }
+  .one{
+    border-radius: 10px;
+    background-color: #e7a84e;
+    font-weight: 700;
+    height: 30px;
+  }
+.companyContainer {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(99, 93, 93, 0.1);
+  background-color: #e7a84e;
+  color: #fff;
+}
+
+.companyDetails {
+  text-align: center;
+}
+
+.sendFeedbackButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #af4c4c;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.socialMediaHandles {
+  margin-top: 20px;
+}
+
+.socialMediaIcon {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.companyDetails {
+    max-width: 90%;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(99, 93, 93, 0.1);
+    background-color: #5dc2db;
+    color: #0a0a0a;
+    text-align: center;
+    
+  }
+  .aboutcompany{
+    font-weight: 799;
+    font-size: 30px;
+    text-align: left;
+    margin-top: -10px;
+  }
+  
+  .companyDetails {
+    text-align: center;
+  }
+  
+  .sendFeedbackButton {
+    margin-top: 10px;
+    padding: 10px 10px;
+    height: 40px;
+    background-color: #af4c4c;
+    font-weight: 500;
+  }  
+  .description{
+    text-align: left;
+    margin-top: -10px;
+    font-size: 20px;
+  }
