@@ -1,10 +1,21 @@
 // DashboardWeb.js
 
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import './DashboardWeb.css';
 
 const Dashboard = () => {
   const [selectedTab, setSelectedTab] = useState('Insights');
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    // Update the current time every second
+    const intervalId = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    // Clear the interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
 
   const renderContent = () => {
     switch (selectedTab) {
@@ -13,7 +24,7 @@ const Dashboard = () => {
           <div className="insightsContent">
             <div className="card">
               <h2>Breaking News of Company</h2>
-              <p>Placeholder content for breaking news...</p>
+              <p>Placeholder content for breaking news.Placeholder content for breaking news.Placeholder content for breaking news.Placeholder content for breaking news.Placeholder content for breaking news.Placeholder content for breaking news.Placeholder content for breaking news...</p>
             </div>
             <div className="card">
               <h2>Recent Blog from Person</h2>
@@ -176,7 +187,13 @@ const Dashboard = () => {
         <div className="companyName">Stealth</div>
         
         <div className="sideMenu">
-         <button>Home</button>
+          <div>
+          <img
+            className="menubarimage"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Home-icon.svg/1200px-Home-icon.svg.png"
+            alt="Menu Icon"
+          />
+          <button>Home</button></div>
           <button>My Profile</button>
           <button>Account Details</button>
           <button>Help</button>
@@ -192,6 +209,11 @@ const Dashboard = () => {
           />
         </div>
       </div>
+      <div className="digitalWatch">
+          <p>{currentTime.toLocaleTimeString()}</p>
+          <p>{currentTime.toLocaleDateString()}</p>
+        </div>
+
       <div className="header">
         <h1>
           <img
